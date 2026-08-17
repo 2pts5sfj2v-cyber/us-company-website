@@ -41,7 +41,7 @@ const sections: { title: string; body: string; id?: string }[] = [
   },
   {
     title: "9. Governing Law",
-    body: "These Terms are governed by the laws of the State of Colorado, United States, without regard to conflict-of-law principles.",
+    body: "These Terms are governed by the laws of the State of New Mexico, United States, without regard to conflict-of-law principles.",
   },
   {
     title: "10. Contact",

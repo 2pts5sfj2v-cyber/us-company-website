@@ -185,6 +185,7 @@ export const marketplaceTags = [
 
 export const contactInfo = {
   email: "gtmsummitridge@outlook.com",
+  address: "1209 Mountain Road Pl NE #11039, Albuquerque, NM 87110, USA",
 };
 
 export const globalFootprint = [

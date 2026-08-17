@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Clock, ShieldCheck } from "lucide-react";
+import { Mail, Clock, MapPin, ShieldCheck } from "lucide-react";
 import { contactInfo } from "@/lib/data";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/contact/ContactForm";
@@ -46,6 +46,18 @@ export default function ContactPage() {
               >
                 {contactInfo.email}
               </a>
+            </div>
+
+            <div className="card p-6">
+              <span className="grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-gradient-to-br from-blue-600/20 to-emerald-500/20">
+                <MapPin className="h-5 w-5 text-emerald-400" />
+              </span>
+              <h3 className="mt-4 font-display text-base font-bold text-white">
+                Registered Address
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-400">
+                {contactInfo.address}
+              </p>
             </div>
 
             <div className="card p-6">

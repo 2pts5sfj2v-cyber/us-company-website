@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mountain, Mail } from "lucide-react";
+import { Mountain, Mail, MapPin } from "lucide-react";
 import { categories, contactInfo } from "@/lib/data";
 
 const companyLinks = [
@@ -48,6 +48,10 @@ export default function Footer() {
               <Mail className="h-4 w-4" />
               {contactInfo.email}
             </a>
+            <p className="mt-3 flex items-start gap-2 text-sm leading-relaxed text-slate-400">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-slate-500" />
+              {contactInfo.address}
+            </p>
           </div>
 
           <div className="lg:col-span-2">
