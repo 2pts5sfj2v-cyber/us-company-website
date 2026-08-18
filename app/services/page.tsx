@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { contactInfo } from "@/lib/data";
 import { ScopeProvider } from "@/lib/scope-context";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ScopeBuilder from "@/components/services/ScopeBuilder";
@@ -26,10 +27,10 @@ export default function ServicesPage() {
             transparent pricing, clear deliverables, and timelines.
           </p>
           <a
-            href="mailto:gtmsummitridge@outlook.com"
+            href={`mailto:${contactInfo.email}`}
             className="mt-4 inline-block text-sm font-semibold text-emerald-400 transition hover:text-emerald-300"
           >
-            gtmsummitridge@outlook.com
+            {contactInfo.email}
           </a>
         </div>
       </section>

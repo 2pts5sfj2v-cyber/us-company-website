@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mountain, Mail, MapPin } from "lucide-react";
+import { Mountain, Mail, MapPin, Phone } from "lucide-react";
 import { categories, contactInfo } from "@/lib/data";
 
 const companyLinks = [
@@ -12,6 +12,7 @@ const companyLinks = [
 const legalLinks = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
+  { label: "Refund Policy", href: "/refund" },
   { label: "Disclaimer", href: "/terms#disclaimer" },
 ];
 
@@ -52,6 +53,15 @@ export default function Footer() {
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-slate-500" />
               {contactInfo.address}
             </p>
+            {contactInfo.phone && (
+              <a
+                href={`tel:${contactInfo.phone.replace(/[^\d+]/g, "")}`}
+                className="mt-3 flex items-center gap-2 text-sm font-semibold text-slate-400 transition hover:text-white"
+              >
+                <Phone className="h-4 w-4 text-slate-500" />
+                {contactInfo.phone}
+              </a>
+            )}
           </div>
 
           <div className="lg:col-span-2">

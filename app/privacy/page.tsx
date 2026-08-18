@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { contactInfo } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -20,7 +21,7 @@ const sections = [
   },
   {
     title: "4. Email Communications",
-    body: "When you submit a form, your details are used to prepare an email to gtmsummitridge@outlook.com. We may contact you regarding your inquiry or related services. You can opt out of non-essential communications at any time.",
+    body: `When you submit a form, your details are used to prepare an email to ${contactInfo.email}. We may contact you regarding your inquiry or related services. You can opt out of non-essential communications at any time.`,
   },
   {
     title: "5. Cookies & Analytics",
@@ -36,11 +37,11 @@ const sections = [
   },
   {
     title: "8. Your Rights",
-    body: "Depending on your location, you may have rights to access, correct, or delete your personal information. To exercise these rights, contact us at gtmsummitridge@outlook.com.",
+    body: `Depending on your location, you may have rights to access, correct, or delete your personal information. To exercise these rights, contact us at ${contactInfo.email}.`,
   },
   {
     title: "9. Contact",
-    body: "Questions about this Privacy Policy can be directed to gtmsummitridge@outlook.com.",
+    body: `Questions about this Privacy Policy can be directed to ${contactInfo.email}.`,
   },
 ];
 

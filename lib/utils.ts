@@ -1,5 +1,6 @@
 import type { Service } from "./types";
 import { services } from "./data/services";
+import { contactInfo } from "./data/company";
 
 export function cn(...classes: Array<string | false | null | undefined>) {
   return classes.filter(Boolean).join(" ");
@@ -43,5 +44,5 @@ export function buildMailto(selected: Service[], message?: string) {
     "Service Inquiry — Summit Ridge Trading LLC"
   );
   const body = encodeURIComponent(message ?? buildScopeSummary(selected));
-  return `mailto:gtmsummitridge@outlook.com?subject=${subject}&body=${body}`;
+  return `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
 }

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { X, CheckCircle2, Mail, ArrowRight } from "lucide-react";
 import { useUI } from "@/lib/ui-context";
+import { contactInfo } from "@/lib/data";
 import Button from "@/components/ui/Button";
 
 export default function BookingModal() {
@@ -43,7 +44,7 @@ export default function BookingModal() {
 
   if (!bookingOpen) return null;
 
-  const mailtoHref = `mailto:gtmsummitridge@outlook.com?subject=${encodeURIComponent(
+  const mailtoHref = `mailto:${contactInfo.email}?subject=${encodeURIComponent(
     "Consultation Request — Summit Ridge Trading LLC"
   )}&body=${encodeURIComponent(
     `Name: ${form.name}\nCompany: ${form.company}\nEmail: ${form.email}\n${

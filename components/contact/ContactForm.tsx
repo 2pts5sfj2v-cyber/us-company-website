@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle2, Mail, Send, ArrowLeft } from "lucide-react";
-import { marketplaces, gmvBrackets, categories } from "@/lib/data";
+import { marketplaces, gmvBrackets, categories, contactInfo } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Button from "@/components/ui/Button";
 
@@ -23,7 +23,7 @@ export default function ContactForm() {
       prev.includes(name) ? prev.filter((x) => x !== name) : [...prev, name]
     );
 
-  const mailtoHref = `mailto:gtmsummitridge@outlook.com?subject=${encodeURIComponent(
+  const mailtoHref = `mailto:${contactInfo.email}?subject=${encodeURIComponent(
     "New Inquiry — Summit Ridge Trading LLC"
   )}&body=${encodeURIComponent(
     `Name: ${form.name}\nCompany: ${form.company}\nEmail: ${form.email}\nTarget marketplace: ${
@@ -171,7 +171,7 @@ export default function ContactForm() {
         <Send className="h-4 w-4" /> Submit Inquiry
       </Button>
       <p className="text-center text-xs text-slate-500">
-        Submitting prepares an email to gtmsummitridge@outlook.com — nothing is sent
+        Submitting prepares an email to {contactInfo.email} — nothing is sent
         automatically.
       </p>
     </form>

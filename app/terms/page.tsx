@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { contactInfo } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -21,7 +22,7 @@ const sections: { title: string; body: string; id?: string }[] = [
   },
   {
     title: "4. Fees & Payment",
-    body: "Fixed-price packages are quoted in US dollars. Payment terms and any applicable expenses are set out in the engagement agreement. Fees are non-refundable except as expressly stated in writing.",
+    body: "Fixed-price packages are quoted in US dollars. Payment terms and any applicable expenses are set out in the engagement agreement. Refund and cancellation requests are governed by our Refund Policy.",
   },
   {
     title: "5. Client Responsibilities",
@@ -44,8 +45,12 @@ const sections: { title: string; body: string; id?: string }[] = [
     body: "These Terms are governed by the laws of the State of New Mexico, United States, without regard to conflict-of-law principles.",
   },
   {
-    title: "10. Contact",
-    body: "Questions about these Terms can be directed to gtmsummitridge@outlook.com.",
+    title: "10. Export & Regulatory Compliance",
+    body: "Our advisory services may involve customs, tariffs, and cross-border trade considerations. Clients remain responsible for compliance with all applicable export, import, and other regulatory requirements in the markets where they operate.",
+  },
+  {
+    title: "11. Contact",
+    body: `Questions about these Terms can be directed to ${contactInfo.email}.`,
   },
 ];
 
