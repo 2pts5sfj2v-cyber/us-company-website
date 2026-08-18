@@ -185,6 +185,7 @@ export const marketplaceTags = [
 
 export const contactInfo = {
   email: "gtmsummitridge@outlook.com",
+  phone: "+1 (575) 250-8566",
   address: "1209 Mountain Road Pl NE #11039, Albuquerque, NM 87110, USA",
 };
 
