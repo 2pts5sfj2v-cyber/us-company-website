@@ -42,7 +42,7 @@ const sections = [
   },
   {
     title: "9. Contact",
-    body: `Questions about refunds or cancellations can be directed to ${contactInfo.email}${contactInfo.phone ? ` or by phone at ${contactInfo.phone}` : ""}.`,
+    body: `Questions about refunds or cancellations can be directed to ${contactInfo.email}.`,
   },
 ];
 
